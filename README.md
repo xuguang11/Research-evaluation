@@ -19,7 +19,7 @@ The dataset is derived from professional surveys of medical staff (`new_science_
   - **Textual Encoding**: Uses **Word2Vec** (via `gensim`) to convert professional titles and department names into vector representations (e.g., 8-dimensional vectors for departments).
   - **Categorical Encoding**: One-hot encoding for gender, region, and training frequency.
   - **Cleaning**: Handles missing values via zero-padding, rounds float values, and corrects anomalous scoring data (clamping scores to a 0–5 range).
-- **Labels**: The target variable is "Rank" (等级), categorized as Low (0), Medium (1), and High (2).
+- **Labels**: The target variable is "Rank" , categorized as Low (0), Medium (1), and High (2).
 
 ------
 
@@ -99,5 +99,6 @@ You can modify parameters in `options.py` or via command line:
 - `--input_size`: Adjust based on the output of your data washing (default is 214).
 
 ### 4. Viewing Results
+
 
 Results, including model weights (`.pt`) and prediction pickles (`.pkl`), will be saved in the `./model_save_file` directory. The console will output the average Accuracy, Precision, Recall, and AUC across all five folds.
