@@ -29,7 +29,6 @@ The codebase is structured into modular components:
 
 - **`model_main.py`**: The entry point for the project. It executes 5-fold cross-validation and manages the training/testing flow.
 - **`fusion_GCN.py`**: Implements the primary architecture (`Model_design`) combining Transformer encoders and GCN layers.
-- **`DataWashing.py`**: A comprehensive script for data cleaning, Word2Vec training, and feature engineering.
 - **`compare_fusion.py`**: Contains baseline models for performance comparison, including CNN, LSTM, MLP, ResNet, and DenseNet.
 - **`init_train_test.py`**: Defines the training loops, optimizer configurations, and evaluation metrics (Accuracy, F1, AUC, etc.).
 - **`options.py`**: Manages hyperparameters and command-line arguments.
@@ -102,3 +101,4 @@ You can modify parameters in `options.py` or via command line:
 
 
 Results, including model weights (`.pt`) and prediction pickles (`.pkl`), will be saved in the `./model_save_file` directory. The console will output the average Accuracy, Precision, Recall, and AUC across all five folds.
+
